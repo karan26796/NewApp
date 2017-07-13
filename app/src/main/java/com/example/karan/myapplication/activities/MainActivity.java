@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()) {
             case R.id.button: {
-                if ((et1.getText().toString().equals("1") || et1.getText().toString().equals("1 ")) &&
-                        (et2.getText().toString().equals("1") || et2.getText().toString().equals("1 "))) {
+                if ((et1.getText().toString().trim().equals("user123@example.com")) &&
+                        (et2.getText().toString().trim().equals("User@1234"))) {
                     v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.click));
                     Toast toast = Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT);
                     toast.show();
