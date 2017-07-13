@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#575757</color>
+    <color name="grey">#90080808</color>
+    <color name="brown">#6d4c41</color>
+    <color name="green">#00463d</color>
+    <color name="green1">#00838f</color>
+    <color name="blue">#0277bd</color>
+    <color name="blue1">#1565c0</color>
+    <color name="blue_d">#283593</color>
+    <color name="purple">#4527a0</color>
+    <color name="purple1">#6a1b9a</color>
+    <color name="notification_bar">#003d32</color>
+    <color name="colorAccent1">#4c4c4c</color>
+    <color name="colorAccent2">#626262</color>
+    <color name="colorPrimaryDark1">#495eea</color>
+    <color name="white">#ffffff</color>
+
+    <array name="rainbow">
+    <item name="grey">#4b4b4b</item>>
+    <item name="brown">#6d4c41</item>>
+    <item name="green">#00695c</item>>
+    <item name="green1">#00838f</item>>
+    <item name="blue">#0277bd</item>>
+    <item name="blue1">#1565c0</item>>
+    <item name="blue_d">#283593</item>>
+    <item name="purple">#4527a0</item>>
+    <item name="purple1">#6a1b9a</item>
+
+    </array>
+
+    <array name="rainbow1">
+        <item name="grey">#434343</item>>
+        <item name="brown">#543b32</item>>
+        <item name="green">#00544a</item>>
+        <item name="green1">#006b74</item>>
+        <item name="blue">#015e96</item>>
+        <item name="blue1">#0f4d94</item>>
+        <item name="blue_d">#1e2870</item>>
+        <item name="purple">#351d7e</item>>
+        <item name="purple1">#521578</item>
+    </array>
+
+
+</resources>
