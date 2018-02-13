@@ -7,6 +7,7 @@
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="colorPrimaryDark">@color/notification_bar</item>
+        <item name="colorPrimary">@color/green</item>
     </style>
     <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
         <item name="tabIndicatorColor">@color/white</item>
@@ -17,8 +18,6 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">@color/white</item>
     </style>
-    <style name="New" parent="Base.TextAppearance.AppCompat.Widget.Button.Inverse">
-        <item name="android:background">?attr/selectableItemBackground</item> </style>
 
     <style name="AppFullScreenTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

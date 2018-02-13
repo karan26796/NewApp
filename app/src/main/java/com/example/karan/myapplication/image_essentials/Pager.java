@@ -56,7 +56,7 @@ public class Pager extends FragmentStatePagerAdapter {
             case 1:
                 return "FAMOUS PLACES";
             default:
-                return null;
+                return "";
         }
     }
 

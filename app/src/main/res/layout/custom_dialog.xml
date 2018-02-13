@@ -1,124 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="270dp"
-    android:elevation="1dp"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
 
     <TextView
-        android:id="@+id/sub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:paddingLeft="5dp"
         android:text="Enter city name"
         android:textColor="@color/green"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/city_name"
+        android:id="@+id/etCityName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/sub"
-        android:backgroundTint="@color/green"
-        android:maxLength="20"
         android:maxLines="1"
         android:textColor="#2e2e2e"
-        tools:text="22" />
+        android:hint="22"
+        android:inputType="text"/>
+
 
     <TextView
-        android:id="@+id/sub1"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/gallery"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/city_desc"
-        android:gravity="center"
-        android:paddingLeft="5dp"
-        android:text="Add Image"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/city_name"
         android:layout_marginTop="10dp"
-        android:paddingLeft="5dp"
         android:text="Enter city description"
         android:textColor="@color/green"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/city_desc"
+        android:id="@+id/etCityDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@color/green"
-        android:maxLength="140"
         android:textColor="#2e2e2e"
-        tools:text="22" />
+        tools:text="22"
+        android:hint="22"
+        android:inputType="text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_no"
-        style="@style/New"
-        android:layout_width="170sp"
-        android:layout_height="40sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/button2"
-        android:foregroundTintMode="src_over"
-        android:text="Back"
-        android:textColor="@color/green"
-        android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Add Image"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/btn_yes"
-        style="@style/New"
-        android:layout_width="170sp"
-        android:layout_height="40sp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/btn_no"
-        android:layout_toStartOf="@+id/btn_no"
-        android:background="@drawable/button1"
-        android:foregroundTintMode="src_over"
-        android:text="OK"
-        android:textColor="@color/green"
-        android:textSize="15sp" />
+        <Button
+            android:id="@+id/btnGallery"
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Gallery"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/gallery"
-        android:layout_width="100sp"
-        android:layout_height="40sp"
-        android:layout_below="@+id/city_desc"
-        android:layout_toEndOf="@+id/sub1"
-        android:background="?selectableItemBackground"
-        android:gravity="center"
-        android:text="Gallery"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="15sp" />
+        <Button
+            android:id="@+id/btnCapture"
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:text="Capture"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#9e9e9e" />
 
-    <Button
-        android:id="@+id/capture"
-        android:layout_width="140sp"
-        android:layout_height="40sp"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/city_desc"
-        android:layout_toEndOf="@+id/gallery"
-        android:background="?selectableItemBackground"
-        android:gravity="center"
-        android:text="Capture"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="15sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:attr/buttonBarButtonStyle"
+            android:background="?attr/selectableItemBackground"
+            android:text="Cancel"
+            android:textColor="@color/green"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@android:attr/buttonBarButtonStyle"
+            android:background="?attr/selectableItemBackground"
+            android:text="Ok"
+            android:textColor="@color/green"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

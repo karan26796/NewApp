@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.karan.myapplication.R;
+import com.example.karan.myapplication.utils.CircleTransform;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -16,32 +17,40 @@ public class CityAdapter extends RecyclerView.Adapter<CityViewHolder> {
 
     Context context;
     ArrayList<CitiesList> cities;
+    String[] cityNames, cityFiller;
 
-    public CityAdapter(Context context, ArrayList<CitiesList> cities){
+    public CityAdapter(Context context, ArrayList<CitiesList> cities) {
 
-        this.context=context;
-        this.cities=cities;
+        this.context = context;
+        this.cities = cities;
     }
 
     @Override
     public CityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(context).inflate(R.layout.row_view,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.row_view, parent, false);
         return new CityViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(CityViewHolder holder, int position) {
-        CitiesList s= cities.get(position);
-        holder.city.setText(s.getCity());
-        holder.filler.setText(s.getFiller());
-        int Width=50,Height=50;
+
+        cityNames = holder.itemView.getResources().getStringArray(R.array.city);
+        cityFiller = holder.itemView.getResources().getStringArray(R.array.filler);
+
+        CitiesList citiesList = cities.get(position);
+        holder.txtCityName.setText(citiesList.getCity());
+        holder.txtCityFiller.setText(citiesList.getFiller());
+
+        int Width = 200, Height = 200;
         if (position < 8) {
             //Picasso image loader used to load images from sd card into imageview
-            Picasso.with(context).load(s.getUri()).centerCrop().
-                    resize(Width, Height).error(R.drawable.plus).
-                    placeholder(R.drawable.plus).into(holder.imageView);
+            Picasso.with(context)
+                    .load(citiesList.getUri())
+                    .centerCrop()
+                    .resize(Width, Height)
+                    .transform(new CircleTransform()).into(holder.imageView);
         } else {
-            holder.imageView.setImageBitmap(s.getBitmap());
+            holder.imageView.setImageBitmap(citiesList.getBitmap());
         }
     }
 

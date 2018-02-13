@@ -17,18 +17,18 @@ import java.util.ArrayList;
  */
 /*Adapter gets the data for recyclerview items*/
 public class SitesAdapter extends RecyclerView.Adapter<SitesViewHolder> {
-    Context con;
+    Context context;
     ArrayList<SitesList> sites;
 
-    public SitesAdapter( Context con, ArrayList<SitesList> sites){
+    public SitesAdapter( Context context, ArrayList<SitesList> sites){
 
-        this.con=con;
+        this.context=context;
         this.sites=sites;
     }
 
     @Override
     public SitesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(con).inflate(R.layout.sites_row,parent,false);
+        View v= LayoutInflater.from(context).inflate(R.layout.sites_row,parent,false);
         return new SitesViewHolder(v);
     }
 
@@ -38,9 +38,10 @@ public class SitesAdapter extends RecyclerView.Adapter<SitesViewHolder> {
         holder.tv.setText(c.getSite());
         int Width=250,Height=200;
         //Picasso image loader used to load images from sd card into imageview
-        Picasso.with(con).load(c.getUri()).centerInside().
-                resize(Width,Height).error(R.drawable.plus).
-                placeholder(R.drawable.plus).into(holder.iv);
+        Picasso.with(context)
+                .load(c.getUri()).
+                resize(Width,Height)
+                .centerCrop();
 
     }
 

@@ -17,6 +17,7 @@
     <color name="colorAccent2">#626262</color>
     <color name="colorPrimaryDark1">#495eea</color>
     <color name="white">#ffffff</color>
+    <color name="accent_material_light">#ffb74d</color>
 
     <array name="rainbow">
     <item name="grey">#4b4b4b</item>>

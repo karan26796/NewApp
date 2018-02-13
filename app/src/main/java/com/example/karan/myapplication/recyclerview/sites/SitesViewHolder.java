@@ -18,6 +18,5 @@ public class SitesViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         tv=( TextView) itemView.findViewById(R.id.tv);
         iv=(ImageView) itemView.findViewById(R.id.iv);
-
     }
 }

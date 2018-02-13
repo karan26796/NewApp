@@ -3,6 +3,7 @@ package com.example.karan.myapplication.fragments;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -28,12 +29,20 @@ public class FamousPlaces extends Fragment {
         View view=inflater.inflate(R.layout.sites_frag, container, false);
 
         cityNo = this.getArguments().getInt("cityIndex");
-        recyclerView=(RecyclerView) view.findViewById(R.id.recy_view);
+        recyclerView=(RecyclerView) view.findViewById(R.id.famousPlacesRecycler);
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.addItemDecoration(new android.support.v7.widget.DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(new SitesAdapter(getContext(), getData()));
-        return view;
     }
+
     private ArrayList<SitesList> getData(){
         File folder;
         SitesList s;
